@@ -1,0 +1,22 @@
+{
+  "semi": true,
+  "printWidth": 120,
+  "proseWrap": "never",
+  "singleQuote": false,
+  "htmlWhitespaceSensitivity": "css",
+  "endOfLine": "auto",
+  "overrides": [
+    {
+      "files": ["**/*.html", "**/*.css", "**/*.scss", "**/*.jsx", "**/*.tsx"],
+      "options": {
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": ["**/*.js", "**/*.ts"],
+      "options": {
+          "tabWidth": 4
+      }
+    }
+  ]
+}
