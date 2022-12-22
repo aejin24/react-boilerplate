@@ -7,18 +7,18 @@ const path = require("path");
 module.exports = {
     entry: {
         vendor: ["react", "react-dom"],
-        app: path.resolve(__dirname, "..", "src", "index.tsx"),
+        app: path.resolve(__dirname, "../src", "index.tsx"),
     },
     output: {
-        path: path.resolve(__dirname, "..", "dist"),
+        path: path.resolve(__dirname, "../dist"),
         filename: "[name].bundle.js",
         clean: true,
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js"],
         alias: {
-            components: path.resolve(__dirname, "..", "src", "components"),
-            scss: path.resolve(__dirname, "..", "src", "assets", "scss"),
+            components: path.resolve(__dirname, "../src", "components"),
+            scss: path.resolve(__dirname, "../src", "assets", "scss"),
         },
     },
     module: {
@@ -43,10 +43,10 @@ module.exports = {
         ],
     },
     plugins: [
-        new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+        new CleanWebpackPlugin(),
         new ProvidePlugin({ React: "react" }),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "..", "public", "index.html"),
+            template: path.resolve(__dirname, "../public", "index.html"),
         }),
     ],
 };
